@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Кабинет</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/pers.css">
+</head>
+<body>
+	<header class="header">
+		<div class="main__head">
+			<div class="header__logo">
+				<a href="#" class="header_logo_link">
+					<img src="./img/svg/logo1.svg" alt="Logo" class="header_logo_pic">
+				</a>
+			</div>
+			<div class="header__menu">
+				<div class="earth">
+					<a href="#" class="link__logo">
+						<img src="./img/svg/icons8.svg" alt="Icons" class="icon">
+					</a>
+				</div>
+				<div class="dropdown" onclick="myFunction()">
+					<button class="dropbtn">
+						<div class="line_menu"></div>
+						<div class="line_menu"></div>
+						<div class="line_menu"></div>
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+					    <a href="#">Настройки</a>
+					    <a href="#">Мой профиль</a>
+					    <a href="#">Помощь</a>
+					</div>
+				</div>
+				<script>
+					function myFunction() {
+					  document.getElementById("myDropdown").classList.toggle("show");
+					}
+
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+					    var dropdowns = document.getElementsByClassName("dropdown-content");
+					    var i;
+					    for (i = 0; i < dropdowns.length; i++) {
+					      var openDropdown = dropdowns[i];
+					      if (openDropdown.classList.contains('show')) {
+					        openDropdown.classList.remove('show');
+					      }
+					    }
+					  }
+					}
+				</script>
+
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="main__block">
+			<div class="h1_block">
+				<h1 class="text-h">
+					Личный кабинет
+				</h1>
+			</div>
+
+			<div class="main__info">
+				<div class="list__info">
+					<ul class="infobar">
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/info_hum.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Профиль</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/message.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Сообщения</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/colocol.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Мероприятия</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/love.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Понравившиеся места</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/star.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Оценки</p>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="main-authoritation">
+					<div class="main__ava">
+						<div class="photo-box">
+							<div class="photo-mask">
+								<img id="profile-photo" class="pers-foto" src="./img/pers_foto.jpg" alt="">
+							</div>
+							<div class="photo-text">
+								<input type="file" id="photo-upload" accept="image/*" onchange="loadFile(event)" style="display:none;"/>
+								<label for="photo-upload" id="upload-label" class="label__text">Добавить фото</label>
+								<button id="delete-button" class="delete-img" style="display:none;">Удалить</button>
+							</div>
+						</div>
+						<script>
+							var image = document.getElementById('profile-photo');
+							var uploadLabel = document.getElementById('upload-label');
+							var deleteButton = document.getElementById('delete-button');
+
+							// Load the image from localStorage if it exists
+							var savedImage = localStorage.getItem('savedImage');
+							if (savedImage) {
+								image.src = savedImage;
+							    uploadLabel.textContent = 'Сменить фото';
+							    deleteButton.style.display = 'block';
+							}
+
+							function loadFile(event) {
+								var reader = new FileReader();
+							    reader.onload = function(e) {
+							    	image.src = e.target.result;
+							    	localStorage.setItem('savedImage', e.target.result);
+							    	uploadLabel.textContent = 'Сменить фото';
+							      	deleteButton.style.display = 'block';
+							    };
+							    reader.readAsDataURL(event.target.files[0]);
+							};
+
+							deleteButton.onclick = function() {
+							    image.src = './img/pers_foto.jpg';
+							    localStorage.removeItem('savedImage');
+							    uploadLabel.textContent = 'Добавить фото';
+							    deleteButton.style.display = 'none';
+							};
+
+						</script>
+					</div>
+				</div>
+			</div>
+			<div class="inputs__autho">
+				<div class="inputs__main__ava">
+					<ul class="list__ava">
+						<li class="ava_item">
+							<input type="text" class="ava-input">
+							<label for="name">Имя</label>
+						</li>
+						<li class="ava_item">
+							<input type="text" class="ava-input">
+							<label for="name">Фамилия</label>
+						</li>
+						<li class="ava_item">
+							<input type="text" class="ava-input">
+							<label for="name">Электронная почта</label>
+						</li>
+						<li class="ava_item">
+							<input type="text" class="ava-input">
+							<label for="name">Номер телефона</label>
+						</li>
+					</ul>
+					<div class="big__input">
+						<textarea class="comment"></textarea>
+						<label for="name">О себе</label>
+					</div>
+				</div>
+			</div>	
+			<div class="main_accounts">
+				<span class="acc_text1">Прикрепленные аккаунты</span>
+				<div class="attached_accounts">
+					<div class="columm">
+						<ul class="acc_list">
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">Twitter<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/twitter.svg" alt="" class="account_img">
+								</a>
+							</li>
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">Instagram<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/insta.svg" alt="" class="account_img">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="columm">
+						<ul class="acc_list">
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">Telegram<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/telegram.svg" alt="" class="account_img">
+								</a>
+							</li>
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">OK<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/odnok.svg" alt="" class="account_img">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="columm">
+						<ul class="acc_list">
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">Facebook<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/face.svg" alt="" class="account_img">
+								</a>
+							</li>
+							<li class="item_app">
+								<a href="#">
+									<span class="name__acc">Google<br><p class="strong__name">Не привязан</p></span>
+									<img src="./img/svg/goo.svg" alt="" class="account_img">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<span class="acc_text2">Фотографии проведенных мероприятий</span>
+				<div id="images" class="img__feed">
+			        <!-- Здесь будут изображения -->
+			    </div>
+			    <input type="file" id="imageUpload" accept="image/*" multiple onchange="addImage(event)" class="feedback__file">
+			    <label for="imageUpload" class="label__feed"><p class="feedtext">+</p></label>
+			    <!-- Модальное окно для просмотра изображений -->
+			    <div id="myModal" class="modal">
+			        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+			        <img class="modal-content" id="img01">
+			        <span class="next" onclick="changeImage(1)">&#10095;</span>
+			    </div>
+			    <script>
+			        var images = []; // Массив для хранения объектов File
+			        var modal = document.getElementById("myModal");
+			        var modalImg = document.getElementById("img01");
+			        var currentIndex = 0; // Индекс текущего просматриваемого изображения
+
+			        function addImage(event) {
+			            var files = event.target.files; // Получаем выбранные файлы
+			            for (var i = 0; i < files.length; i++) {
+			                if (files[i].type.startsWith("image/")) { // Проверяем, что файл является изображением
+			                    images.push(URL.createObjectURL(files[i])); // Создаем временный URL для файла и добавляем его в массив
+			                }
+			            }
+			            updateImages();
+			        }
+
+			        function updateImages() {
+			            var container = document.getElementById("images");
+			            container.innerHTML = "";
+			            for (var i = 0; i < images.length && i < 3; i++) {
+			                var div = document.createElement("div");
+			                div.className = "image-container";
+			                div.style.backgroundImage = "url('" + images[i] + "')";
+			                div.onclick = function(index) {
+			                    return function() {
+			                        openModal(index);
+			                    }
+			                }(i);
+			                if (i == 2 && images.length > 3) {
+			                    var overlay = document.createElement("div");
+			                    overlay.className = "overlay";
+			                    overlay.innerText = "+" + (images.length - 3);
+			                    div.appendChild(overlay);
+			                }
+			                container.appendChild(div);
+			            }
+			        }
+
+			        function openModal(index) {
+			            modal.style.display = "block";
+			            modalImg.src = images[index];
+			            currentIndex = index;
+			        }
+
+			        function closeModal() {
+			            modal.style.display = "none";
+			        }
+
+			        function changeImage(n) {
+			            currentIndex = (currentIndex + n + images.length) % images.length;
+			            modalImg.src = images[currentIndex];
+			        }
+
+			        window.onclick = function(event) {
+			            if (event.target == modal) {
+			                closeModal();
+			            }
+			        }
+			    </script>
+			    <div class="feed_line"></div>
+			    <span class="bottom__feedtext">Добавьте дополнительные свои фотографии для<br>увеличения доверия арендодателя</span>
+			</div>
+			<div class="feed_footer">
+				<div class="submit_block">
+					<button class="submit">
+						<span class="submit_text">Сохранить</span>
+					</button>
+					<button class="submit">
+						<span class="submit_text">Редактировать</span>
+					</button>
+				</div>
+				<div class="inputs__feedblock">
+					<ul class="dec">
+						<li class="feed_li">
+							<input type="text" class="feditem">
+							<label for="inputlab">Номер телефона</label>
+						</li>
+						<li class="feed_li">
+							<input type="text" class="feditem">
+							<label for="inputlab">Электронная почта</label>
+						</li>
+						<li class="feed_li">
+							<input type="text" class="feditem">
+							<label for="inputlab">Пароль</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

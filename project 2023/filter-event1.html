@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Фильтры</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/main-filter.css">
+</head>
+<body>
+	<main class="main">
+		<div class="main-filters">
+			<div class="filter-section">
+				<div class="right_list">
+					<div class="firs__list">
+						<ul class="list__checks">
+							<li class="inline">
+								<input type="checkbox">
+									<span class="paratext">
+										Доступная среда
+									</span>
+							</li>
+							<li class="inline">
+								<input type="checkbox">
+									<span class="paratext">
+										Есть схема места
+									</span>
+							</li>
+							<li class="inline">
+								<input type="checkbox">
+									<span class="paratext">
+										Мгновенное<br>бронирование
+									</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="left_list">
+					<div class="h__text">
+						<h2 class="plash">
+							Площадь (м²)
+						</h2>
+						<span class="filtertext">От</span>
+						<span class="filtertext">До</span>
+					</div>
+					<div class="inputs__">
+						<input type="number">
+						<input type="number">
+					</div>
+					<div class="location__">
+						<h2 class="plash2">
+							Локация
+						</h2>
+						<select class="selector__">
+							<option value="" disabled selected>Выберите округ</option>
+							<option value="volvo">asdsd</option>
+							<option value="saab"></option>
+							<option value="mercedes"></option>
+							<option value="audi"></option>
+						</select>
+					</div>
+					<div class="container">
+						<h2 class="plash3">
+							Правила
+						</h2>
+						<ul class="container_list">
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Разрешено с животными</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Можно курить на территории</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Можно свой кейтеринг</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Можно свой алкоголь</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Можно шуметь после 23:00</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Можно с детьми</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Без залога</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Еда и напитки с собой</span>
+							</li>
+							<li class="contline">
+								<input type="checkbox"><span class="cont-text">Без депозита</span>
+							</li>
+						</ul>
+					</div>
+					<div class="checkmark__list">
+						<button onclick="toggleCheckmarks()" class="btn-quest">Удобства <img id="arrow" src="./img/svg/icon-strelka.svg" alt="Стрелка">
+						</button>
+
+						<div id="checkmarks" class="hidden">
+							<ul class="list_checks">
+								<div class="column">
+								    <li class="li__">
+								    	<input type="checkbox" id="check1" name="check"><span class="item_text">Быстрый интернет</span>
+									</li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check2" name="check"><span class="item_text">Кондиционер</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check3" name="check"><span class="item_text">Самостоятельное прибытие</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check4" name="check"><span class="item_text">Барбекю-гриль</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check5" name="check"><span class="item_text">Детская зона</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check6" name="check3"><span class="item_text">Защита от комаров</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check7" name="check3"><span class="item_text">Зона lounge</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check8" name="check3"><span class="item_text">Зона VIP</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check9" name="check3"><span class="item_text">Зона для детей</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check10" name="check3"><span class="item_text">Зона для курения</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check11" name="check3"><span class="item_text">Зона для работы</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check12" name="check3"><span class="item_text">Кафе(рядом/внутри здания)</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check13" name="check3"><span class="item_text">Кофемашина</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check14" name="check3"><span class="item_text">Купель (для бань)</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check15" name="check3"><span class="item_text">Место для кофебрейка</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check16" name="check3"><span class="item_text">Место для рыбалки</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check17" name="check3"><span class="item_text">Ячейка для хранения личных вещей</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check18" name="check3"><span class="item_text">На берегу водоёма</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check19" name="check3"><span class="item_text">Очаг внутри беседки</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check20" name="check3"><span class="item_text">Панорамные окна</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check21" name="check3"><span class="item_text">Собственный дворик</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check22" name="check3"><span class="item_text">Стационарный мангал</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check23" name="check3"><span class="item_text">Стул для кормления</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check24" name="check3"><span class="item_text">Цифровое телевидение</span>
+								    </li>
+								</div>
+								<div class="column">
+								    <li class="li__">
+								    	<input type="checkbox" id="check25" name="check3"><span class="item_text">Парковка</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check26" name="check3"><span class="item_text">Отопление</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check27" name="check3"><span class="item_text">Выход к воде</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check28" name="check3"><span class="item_text">Wi-Fi</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check29" name="check3"><span class="item_text">Барная стойка</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check30" name="check3"><span class="item_text">Бассейн</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check31" name="check3"><span class="item_text">Веранда</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check32" name="check3"><span class="item_text">Видеосвязь</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check33" name="check3"><span class="item_text">Гостиница</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check34" name="check3"><span class="item_text">Джакузи</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check35" name="check3"><span class="item_text">Кальян</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check36" name="check3"><span class="item_text">Камин</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check37" name="check3"><span class="item_text">Парковка</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check38" name="check3"><span class="item_text">Кулер</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check39" name="check3"><span class="item_text">Мангал</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check40" name="check3"><span class="item_text">Плед</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check41" name="check3"><span class="item_text">Сцена</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check42" name="check3"><span class="item_text">Терраса</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check43" name="check3"><span class="item_text">Ушат (в бане)</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check44" name="check3"><span class="item_text">Стул для кормления</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check45" name="check3"><span class="item_text">Чай, кофе и печенье</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check46" name="check3"><span class="item_text">Чан (в бане)</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check47" name="check3"><span class="item_text">Шест</span>
+								    </li>
+								    <li class="li__">
+								    	<input type="checkbox" id="check48" name="check3"><span class="item_text">Мини-бар</span>
+								    </li>
+								</div>
+						    </ul>
+						</div>
+
+						<script>
+						function toggleCheckmarks() {
+						    var checkmarks = document.getElementById("checkmarks");
+						    var arrow = document.getElementById("arrow");
+						    var filterSection = document.querySelector('.filter-section');
+
+						    if (checkmarks.style.display === "none") {
+						        checkmarks.style.display = "block";
+						        arrow.classList.add("rotated");
+						        filterSection.style.height = '1761px'; // Изменит высоту на 1761px, когда кнопка нажата
+						    } else {
+						        checkmarks.style.display = "none";
+						        arrow.classList.remove("rotated");
+						        filterSection.style.height = '700px'; // Вернет высоту обратно на 700px, когда кнопка нажата снова
+						    }
+						}
+
+						</script>
+
+					</div>
+					<div class="filter-submit">
+						<div class="line__submit"></div>
+						<div class="buttons_filter_submit">
+							<button class="clear">
+								Очистить
+							</button>
+							<button class="submit">
+								Применить фильтры
+							</button>
+						</div>
+						<script>
+							document.querySelector('.clear').addEventListener('click', function() {
+							    var inputs = document.querySelectorAll('input');
+							    for(var i = 0; i < inputs.length; i++) {
+							      inputs[i].value = '';
+							    }
+							    var checkboxes = document.querySelectorAll('input[type=checkbox]');
+							    for(var i = 0; i < checkboxes.length; i++) {
+							      checkboxes[i].checked = false;
+							    }
+							  });
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

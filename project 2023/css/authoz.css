@@ -1,0 +1,186 @@
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/rubik-v28-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/rubik-v28-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/rubik-v28-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.line {
+  align-items: center;
+}
+
+.exit {
+  background-color: transparent;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin-top: 35px;
+  margin-left: 33px;
+  border: 2px;
+}
+
+.text-reg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  width: 150px;
+  height: 30px;
+  font-family: Rubik;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(71, 71, 71, 1);
+}
+
+.line_ {
+  margin-top: 30px;
+  width: 100%;
+  height: 1px;
+  background: rgba(196, 196, 196, 1);
+}
+
+.main-elem {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.texth1 {
+  width: 381px;
+  height: 28px;
+  margin-top: 100px;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(54, 54, 54, 1);
+}
+
+.input-container {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-container input {
+  width: 518px;
+  height: 56px;
+  padding: 3px, 14px, 3px, 14px;
+  border-radius: 8px;
+  margin-top: 14px;
+  border: 1px;
+  gap: 10px;
+  border: 1px solid rgba(176, 176, 176, 1);
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+input::placeholder {
+  color: rgba(54, 54, 54, 1);
+  padding-left: 14px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 30px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.link__ {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #008C8C;
+  text-decoration: none;
+}
+
+.bttn {
+  width: 518px;
+  height: 43px;
+  margin-top: 42px;
+  border-radius: 30px;
+  background: #B13957;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.more-society {
+  margin-top: 20px;
+}
+
+
+.btn-google {
+  width: 518px;
+  height: 56px;
+  border-radius: 8px;
+  background: white;
+  border: 1px;
+  border: 1px solid #AFAFAF;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.btn-facebook {
+  margin-top: 20px;
+  width: 518px;
+  height: 56px;
+  border-radius: 8px;
+  background: white;
+  border: 1px;
+  border: 1px solid #AFAFAF;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}

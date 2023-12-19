@@ -1,0 +1,682 @@
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/rubik-v28-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/rubik-v28-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/rubik-v28-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 7;
+  font-weight: normal;
+  color: #144747;
+}
+
+
+/* Начало настроек верхней части */
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: green;
+}
+
+.wrapper {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 36px;
+}
+
+.header__logo {
+  width: 170px;
+  height: 62.47px;
+}
+
+.header_list {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.header_item1 {
+  width: 214px;
+  height: 19px;
+}
+
+.header_item2 {
+  width: 174px;
+  height: 19px;
+}
+
+.header_item:last-child {
+  margin-right: 0;
+}
+
+.icons {
+  width: 113px;
+  height: 42px;
+  margin-right: 20px;
+}
+
+.menu_ {
+  width: 77px;
+  height: 42px;
+  border-radius: 21px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 1);
+}
+
+.dropbtn {
+  width: 65px;
+  height: 34px;
+  border-radius: 21px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.18);
+  border: 0;
+}
+
+.dropdown {
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block !important;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+.line_menu {
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: #222222;
+  margin-top: 2px;
+}
+
+
+.header_link1 {
+  font-size: 16px;
+  line-height: 18.96px;
+  color: #363636;
+  text-decoration: none;
+}
+
+
+.header_link2 {
+  font-size: 16px;
+  line-height: 18.96px;
+  color: #144747;
+  text-decoration: none;
+}
+
+.header_link1:hover, .header_link1:focus, .header_link1:active {
+  opacity: .75;
+}
+
+.header_link2:hover, .header_link2:focus, .header_link2:active {
+  opacity: .75;
+}
+
+.header__bar {
+  margin-left: 60px;
+}
+
+.search-bar {
+  width: 940px;
+  height: 80px;
+  margin-top: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 48px;
+  box-shadow: 0 25px 50px #008C8C1A;
+  float: left;
+}
+
+.last-input {
+  border-radius: 0;
+}
+
+
+.search-bar input{
+  border: 0px;
+  padding: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(221, 221, 221, 1);
+}
+
+
+.search-bar input::placeholder {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.btn-srch {
+  position: absolute;
+  width: 125px;
+  height: 80px;
+  margin-left: 850px;
+  background-color: #009688;
+  border: none;
+  border-radius: 0px 40px 40px 0px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0px -1px 4px 0px rgba(168, 255, 255, 0.3) inset;
+  box-shadow: 0px 0px 19px 0px rgba(0, 140, 140, 0.25);
+}
+
+.icon {
+  font-size: larger;
+  font-weight:bold; 
+  width: 16px;
+  height: 16px;
+  margin-top: 13px;
+  margin-right: 10px;
+}
+
+.btn__line {
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: #222222;
+  margin-top: 2px;
+}
+
+
+/* Конец настроек верхней части */
+
+
+.intro {
+  height: 105vh;
+  background: url(../img/Vector.jpg) no-repeat right center;
+  padding-top: 342px;
+  padding-left: 183px;
+}
+
+.intro_title {
+  width: 302px;
+  height: 62px;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700px;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.intro_par {
+  width: 381px;
+  height: 75px;
+  font-family: Rubik;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.mestosrch {
+  width: 270px;
+  height: 66px;
+  border-radius: 33px;
+  box-shadow: 0px 4px 0px 0px rgba(121, 0, 30, 1);
+  box-shadow: 0px 0px 19px 0px rgba(177, 57, 87, 0.25);
+  box-shadow: 0px -1px 4px 0px rgba(168, 255, 255, 0.3) inset;
+  background: rgba(177, 57, 87, 1);
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.container {
+  margin-left: 150px;
+  margin-top: 80px;
+}
+
+.brd-title {
+  width: 417px;
+  height: 49px;
+  font-family: Rubik;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: center;
+  border-bottom: 10px;
+}
+
+.line_h3 {
+  width: 133px;
+  height: 6px;
+  border-radius: 8px;
+  background: #008C8C;
+  margin-left: 20px;
+}
+
+.loft {
+  width: 282px;
+  height: 197.5px;
+  border-radius: 8px;
+  margin-top: 40px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.bar {
+  width: 282px;
+  height: 156px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.besedka {
+  width: 282px;
+  height: 156px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.spa {
+  width: 282px;
+  height: 156px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.cottage {
+  width: 282px;
+  height: 197.5px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.bowling {
+  width: 430px;
+  height: 239px;
+  margin-bottom: 35px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.quests {
+  width: 430px;
+  height: 239px;
+  margin-bottom: 35px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+
+.bg-block {
+  position: relative;
+  height: 80vh;
+  background: url(../img/Bg.png) no-repeat;
+}
+
+.in__block {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.single {
+  position: absolute;
+  margin-top: 120px;
+  width: 336px;
+  height: 39px;
+  font-family: Rubik;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #C54867;
+  margin-left: 770px;
+}
+
+.para {
+  position: absolute;
+  margin-top: 170px;
+  margin-left: 770px;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+  color: #D9D9D9;
+}
+
+.n-text {
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.type2txt__ {
+  margin-left: 150px;
+}
+
+.btn-sld {
+  margin-left: 60px;
+}
+
+.slide-btn {
+  margin-top: 340px;
+  margin-left: 100px;
+  width: 52px;
+  height: 52px;
+  border-radius: 30px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 30px 0px #0000001A;
+  background: #237C82;
+  font-size: 25px;
+  color: white;
+}
+
+.resp__ {
+  width: 282px;
+  height: 156px;
+  border-radius: 8px;
+  margin-left: 3px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.resp2__ {
+  margin-top: 41px;
+  width: 282px;
+  height: 197.5px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.resp3__ {
+  width: 430px;
+  height: 239px;
+  box-shadow: 0px 1px 2px 0px #00000024;
+  box-shadow: 0px 4px 20px 0px #00000026;
+}
+
+.brd_title2 {
+  width: 417px;
+  height: 49px;
+  font-family: Rubik;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.line_h3 {
+  width: 133px;
+  height: 6px;
+  border-radius: 8px;
+  background: #008C8C;
+}
+
+.block_end {
+  margin-top: 80px;
+  height: 80vh;
+  position: relative;
+  background: url(../img/Bg.png) no-repeat;
+}
+
+.in__block2 {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.event__block {
+  margin-top: 180px;
+}
+
+
+.events__list__block {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first__block, .two_block {
+  width: 18%; /* Регулируйте это значение в соответствии с вашими потребностями */
+}
+
+
+.item {
+  background: url(../img/svg/moon.svg) no-repeat;
+  margin-left: 30px;
+}
+
+.type_event {
+  margin-left: 70px;
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #363636;
+}
+
+.mero_event {
+  margin-left: 70px;
+  margin-top: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #5E7979;
+}
+
+.event_link {
+  text-decoration: none;
+}
+
+
+.event_link:hover, .event_link:focus, .event_link:active {
+  opacity: .75;
+}
+
+.footer__support {
+  margin-top: 500px;
+  height: 40vh;
+  background: url(../img/footer_page.png);
+}
+
+.__line__ {
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  border-radius: 12px;
+  background: #008C8C;
+  margin-top: 53px;
+  margin-left: 300px;
+}
+
+.__line2__ {
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  border-radius: 12px;
+  background: #9CD0CD;
+  margin-top: 53px;
+  margin-left: 700px;
+}
+
+.list__text__ {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+.link__pain {
+  display: inline-block;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #EAEAEA;
+  margin-top: 50px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.link__pain:hover, .link__pain:focus, .link__pain:active {
+  opacity: 0.75;
+}
+
+.rest {
+  margin-top: 62px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #EAEAEA;
+}
+
+.list__text2__ {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 700px;
+}
+
+.__line3__ {
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  border-radius: 12px;
+  background: #B13957;
+  margin-top: 53px;
+  margin-left: 1050px;
+}
+
+.list_ico {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 1050px;
+}
+
+.ul__ico {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-s {
+  margin-left: 40px; /* Применяется ко всем элементам <li> */
+}
+
+.icon-s:first-child {
+  margin-left: 0; /* Переопределяет margin-left только для первого элемента <li> */
+}
+
+
+.ico-text {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 24px;
+  color: #EAEAEA;
+}

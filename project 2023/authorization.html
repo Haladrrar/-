@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/authoz.css">
+	<title>Aвторизация</title>
+<body>
+	</head>
+	<header class="authorization">
+		<div class="vector">
+			<div class="line">
+				<div class="button">
+					<button class="exit">
+						<img src="./img/svg/exit.svg" alt="" class="img-exit">
+					</button>
+				</div>
+				<div class="text-reg">
+					<span class="text">
+						Вход
+					</span>
+				</div>
+				<div class="line_"></div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main-reg">
+			<div class="main-elem">
+				<div class="text_">
+					<h1 class="texth1">
+						Добро пожаловать в Eventplace
+					</h1>
+					<div class="inputs_">
+						<div class="input-container">
+							<input type="email" id="email" placeholder="Электронная почта">
+						</div>
+
+						<div class="input-container">
+							<input type="password" id="password" placeholder="Пароль">
+							<img src="./img/svg/oka.svg" alt="" class="eye-icon" onclick="togglePasswordVisibility()">
+						</div>
+						<script>
+							function togglePasswordVisibility() {
+								var passwordInput = document.getElementById('password');
+								var passwordType = passwordInput.getAttribute('type');
+
+								if (passwordType === 'password') {
+									passwordInput.setAttribute('type', 'text');
+								} else {
+									passwordInput.setAttribute('type', 'password');
+									}
+								}
+						</script>
+						<div class="author-z">
+							<div class="text-bttn">
+								<a href="#" class="link__">Забыли пароль?</a>
+							</div>
+							<div class="main_btn">
+								<button class="bttn">
+									Войти
+								</button>
+							</div>
+						</div>
+						<div class="more-society">
+							<div class="more-society_">
+								<div class="google">
+									<button class="btn-google">
+										<img src="./img/svg/google.svg" alt="" class="google-icon">
+										С помощью Google
+									</button>
+								</div>
+								<div class="facebook">
+									<button class="btn-facebook">
+										<img src="./img/svg/facebook.svg" alt="" class="google-icon">
+										С помощью Facebook
+									</button>
+								</div>
+							</div>
+						</div>
+</body>
+</html>

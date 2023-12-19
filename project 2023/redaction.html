@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Редактирование</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/redact.css">
+</head>
+<body>
+	<header class="header">
+		<div class="main__head">
+			<div class="header__logo">
+				<a href="#" class="header_logo_link">
+					<img src="./img/svg/logo1.svg" alt="Logo" class="header_logo_pic">
+				</a>
+			</div>
+			<div class="header__menu">
+				<div class="earth">
+					<a href="#" class="link__logo">
+						<img src="./img/svg/icons8.svg" alt="Icons" class="icon">
+					</a>
+				</div>
+				<div class="dropdown" onclick="myFunction()">
+					<button class="dropbtn">
+						<div class="line_menu"></div>
+						<div class="line_menu"></div>
+						<div class="line_menu"></div>
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+					    <a href="#">Настройки</a>
+					    <a href="#">Мой профиль</a>
+					    <a href="#">Помощь</a>
+					</div>
+				</div>
+				<script>
+					function myFunction() {
+					  document.getElementById("myDropdown").classList.toggle("show");
+					}
+
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+					    var dropdowns = document.getElementsByClassName("dropdown-content");
+					    var i;
+					    for (i = 0; i < dropdowns.length; i++) {
+					      var openDropdown = dropdowns[i];
+					      if (openDropdown.classList.contains('show')) {
+					        openDropdown.classList.remove('show');
+					      }
+					    }
+					  }
+					}
+				</script>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main__block">
+			<div class="h1_block">
+				<h1 class="text-h">
+					Личный кабинет
+				</h1>
+			</div>
+
+			<div class="main__info">
+				<div class="list__info">
+					<ul class="infobar">
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/info_hum.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Профиль</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/message.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Сообщения</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/colocol.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Мероприятия</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/love.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Понравившиеся места</p>
+							</button>
+						</li>
+						<li class="parametr">
+							<button class="info_button">
+								<img src="./img/svg/star.svg" alt="info" class="img-info"><br>
+								<p class="text_btt">Оценки</p>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<h2 class="redact_text">
+					Режим редактирования объявления
+				</h2>
+				<div class="text_block">
+					<span class="redact_span">Информация</span>
+					<span class="redact_span">Общие сведения</span>
+				</div>
+				<div class="name_redact">
+					<span class="name_span">
+						Название:
+					</span>
+					<div class="input_redact">
+						<input type="text" class="wrap" placeholder=" Название вашей площадки">
+					</div>
+					<div>
+						<select class="operator">
+							<option value="" disabled selected hidden>Тип площадки</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+					</div>
+					<img src="./img/svg/m2.svg" alt="" class="ploshad_img">
+					<span class="name_span2">Площадь</span>
+					<div class="ploshad_wrap">
+						<p class="para_m">м²</p>
+						<input type="number" class="m2">
+					</div>
+					<img src="./img/svg/ghost.svg" alt="" class="gost_img">
+					<span class="name_span3">Количество гостей</span>
+					<div class="count_">
+						<span class="count_span">до</span>
+						<input type="number" class="count_input">
+					</div>
+					<img src="./img/svg/gis.svg" alt="" class="gis_img">
+					<span class="name_span4">Ближайшая остановка</span>
+					<div class="ostanovka__">
+						<input type="text" class="gis_input">
+					</div>
+					<img src="./img/svg/time.svg" alt="" class="time_img">
+					<span class="name_span5">Время ходьбы до остановки</span>
+					<div class="time__">
+						<span class="time_span">минут</span>
+						<input type="number" class="time_input">
+					</div>
+					<span class="work_mode">Режим работы:</span>
+					<div class="work_list">
+						<ul class="ul_work">
+							<li class="item">
+								<p class="work_text">Пн</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Вт</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Ср</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Чт</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Пт</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Сб</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+							<li class="item">
+								<p class="work_text">Вс</p>
+								<input type="number" class="work_input" placeholder="Ввод времени">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="information_block">
+					<select class="select_info">
+						<option value="" disabled selected hidden>Вид кухни</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+					<select class="select_info">
+						<option value="" disabled selected hidden>Вид площадки</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+					<select class="select_info">
+						<option value="" disabled selected hidden>Стиль интерьера</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+					<select class="select_info">
+						<option value="" disabled selected hidden>Имитация</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+					<select class="select_info">
+						<option value="" disabled selected hidden>О месте</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</div>
+				<div class="mero_block">
+					<span class="info_text">Рекомендуемые мероприятия</span>
+					<br>
+					<select class="select_info1">
+						<option value="" disabled selected hidden>Выбрать мероприятие</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</div>
+				<div class="rule__">
+					<h2 class="h2-text">Правила</h2>
+					<div class="block__">
+						<div class="cont_check">
+
+							<input type="number" class="check_input">
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Депозит
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<input type="number" class="check_input">
+							<label class="container">Залог
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Кейтеринг
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="cont_check">
+							<input type="number" class="check_input">
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Еда и напитки 
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Шум после 23:00
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Курение можно
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="cont_check">
+							<input type="number" class="check_input">
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Домашние животные
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Шум после 23:00
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+
+							<button class="btn-check"><img src="./img/svg/yes.svg" alt="" class="yes"></button>
+							<button class="btn-no"><img src="./img/svg/no.svg" alt="" class="no"></button>
+
+							<label class="container">Администратор на<br>площадке
+								<input type="checkbox" name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="scheme_">
+					<h2 class="h2_scheme">
+						Схема зала
+					</h2>
+					<input type="file" id="imageUpload" style="display:none">
+					<img id="imagePreview" class="img__file">
+					<button onclick="document.getElementById('imageUpload').click()" class="btn-scheme">+ Загрузить схему
+					</button>
+					<script>
+					  	document.getElementById('imageUpload').onchange = function() {
+					    var reader = new FileReader();
+					    reader.onload = function(e) {
+					      document.getElementById('imagePreview').src = e.target.result;
+					    };
+					    reader.readAsDataURL(this.files[0]);
+					  };
+					</script>
+
+				</div>
+				<div class="attachments__">
+					<h2 class="h2_attachments">
+						Вложения
+					</h2>
+					<div class="attc" onclick="myFunction2()">
+						<button class="attach_btn">
+							+ Добавить вложения
+						</button>
+						<div id="myDropdown1" class="dropdown-content1">
+						    <a href="#">Меню</a>
+						    <div class="line_bar"></div>
+						    <a href="#">Прайс</a>
+						    <div class="line_bar"></div>
+						    <a href="#">Бар</a>
+						</div>
+						<script>
+							function myFunction2() {
+							  document.getElementById("myDropdown1").classList.toggle("show");
+							}
+
+							window.onclick = function(event) {
+							  if (!event.target.matches('.attach_btn')) {
+							    var dropdowns = document.getElementsByClassName("dropdown-content1");
+							    var i;
+							    for (i = 0; i < dropdowns.length; i++) {
+							      var openDropdown = dropdowns[i];
+							      if (openDropdown.classList.contains('show')) {
+							        openDropdown.classList.remove('show');
+							      }
+							    }
+							  }
+							}
+						</script>
+						<div class="block_img_label" id="imageContainer"></div>
+					</div>
+					<div class="attc">
+						<button class="attach_btn" onclick="document.getElementById('myFile').click()">+ Добавить фотографию</button>
+						<input type="file" id="myFile" name="filename" accept="image/*" onchange="addImage()" multiple style="display: none">
+
+						<script>
+						var imageCounter = 0;
+
+						function addImage() {
+						  var imgInput = document.getElementById('myFile');
+						  var imgContainer = document.getElementById('imageContainer');
+
+						  for (var i = 0; i < imgInput.files.length; i++) {
+						    if (imageCounter >= 3) {
+						      alert('Вы можете добавить максимум три изображения');
+						      break;
+						    }
+
+						    var img = document.createElement('img');
+						    img.src = URL.createObjectURL(imgInput.files[i]);
+						    img.height = 100;
+						    img.onload = function() {
+						      URL.revokeObjectURL(this.src);
+						    }
+
+						    imgContainer.appendChild(img);
+						    imageCounter++;
+						  }
+						}
+						</script>
+					</div>
+				</div>
+				<div class="tarif">
+					<h2 class="h2_tarif">
+						Тарифы
+					</h2>
+					<div class="button_input">
+						<button class="btn-tar">
+							+ Тариф
+						</button>
+					</div>
+					<input type="text" class="tar-input" placeholder="Название">
+				</div>
+				<div class="iconnn">
+					<button class="icon-btnn">
+						Загрузить иконку
+						<img src="./img/svg/icon_redact.svg" alt="" class="icon_redact">
+					</button>
+					<h2 class="h2_time">
+						Основной час:
+					</h2>
+					<input type="text" class="time_input">
+					<h2 class="h2_time">
+						Последующие часы:
+					</h2>
+					<input type="text" class="time_input">
+					<h2 class="max_price">
+						Максимальная стоимость:
+					</h2>
+					<input type="text" class="input_price">
+				</div>
+				<input type="text" class="opisanie" placeholder="Описание">
+				<div class="parametre">
+					<h2 class="h2_parametre">
+						Параметры
+					</h2>
+					<div class="list_param">
+						<div class="block_param">
+							<p class="para_m22">м²</p>
+							<img src="./img/svg/m2.svg" alt="" class="ploshad_img2">
+							<input type="number" class="m22">
+						</div>
+						<div class="block_param">
+							<img src="./img/svg/ghost.svg" alt="" class="gost_img2">
+							<span class="count_spa2n2">до</span>
+							<input type="number" class="count_input">
+						</div>
+						<div class="block_param">
+							<img src="./img/svg/gis.svg" alt="" class="gis_img2">
+							<span class="name_span42">Ближайшая остановка</span>
+							<input type="text" class="gis_input">
+						</div>
+						<div class="block_param">
+							<img src="./img/svg/time.svg" alt="" class="time_img2">
+							<span class="name_span52">Время ходьбы до остановки</span>
+							<input type="number" class="time_input2">
+							<span class="time_span2">минут</span>
+						</div>
+						<div class="block_param">
+							<span class="vhod">Выход</span>
+							<select class="vhod_select">
+								<option value="" disabled selected hidden>Парадный вход</option>
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="*">*</option>
+								<option value="/">/</option>
+							</select>
+						</div>
+						<div class="block_param">
+							<span class="park_span">Парковка:</span>
+							<input type="number" class="park_input">
+							<span class="park_span2">машиномест</span>
+							<select class="park_select">
+								<option value="" disabled selected hidden>Бесплатно</option>
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="*">*</option>
+								<option value="/">/</option>
+							</select>
+							<span class="park_span3">тенге</span>
+						</div>
+					</div>
+				</div>
+				<div class="domestic">
+					<div class="block_home">
+						<h2 class="h2_dome">
+							Удобства
+						</h2>
+						<select class="home_select">
+							<option value="" disabled selected hidden>Выбрать</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+						<br>
+						<button class="home_btn">
+							+ Добавить свой параметр
+						</button>
+					</div>
+					<div class="block_home">
+						<h2 class="h2_dome">
+							Бытовые условия
+						</h2>
+						<select class="home_select">
+							<option value="" disabled selected hidden>Выбрать</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+						<br>
+						<button class="home_btn">
+							+ Добавить свой параметр
+						</button>
+					</div>
+					<div class="block_home">
+						<h2 class="h2_dome">
+							Мебель
+						</h2>
+						<select class="home_select">
+							<option value="" disabled selected hidden>Выбрать</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+						<br>
+						<button class="home_btn">
+							+ Добавить свой параметр
+						</button>
+					</div>
+					<div class="block_home">
+						<h2 class="h2_dome">
+							Оборудование
+						</h2>
+						<select class="home_select">
+							<option value="" disabled selected hidden>Выбрать</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+						<br>
+						<button class="home_btn">
+							+ Добавить свой параметр
+						</button>
+					</div>
+				</div>
+				<div class="services">
+					<div class="services_block">
+						<h2 class="h2_services">
+							Услуги
+						</h2>
+
+						<span class="srvc-name">Название</span>
+						<br>
+
+						<div class="icons-srcv">
+							<p><img src="./img/svg/name_redact.svg" alt="" class="icon_serv"></p>
+							<p><img src="./img/svg/no_redact.svg" alt="" class="exit_service"></p>
+						</div>
+						<input type="text" class="name_service">
+						<br>
+
+						<span class="price_serc">Цена:</span>
+
+						<input type="number" class="srvc_input">
+
+						<br>
+						<button class="btn-srvc">
+							+ Добавить услугу
+						</button>
+					</div>
+					<div class="poster">
+						<h2 class="h2_poster">
+							Афиша
+						</h2>
+						<span class="poster_text" style="margin-top:30px;position: absolute;">Добавить картинку:</span>
+
+						<input type="file" id="imgUp" class="posterfile">
+
+						<label for="imgUp" style="cursor:pointer; position:absolute; margin-left: 150px; margin-top: 28px">
+							<img src="./img/svg/icon_redact.svg" alt="" class="poster_icon">
+						</label>
+
+						<span class="post_name" style="position: absolute; margin-top: 70px">Название</span>
+						<input type="text" class="post_input">
+					</div>
+					<div class="list-data" style="margin-top: 30px">
+						<nav class="data__">
+							<ul class="ul_data">
+								<li class="li_data">
+									<span class="datatext">Дата</span>
+									<br>
+									<input type="number" class="datainput">
+								</li>
+
+								<li class="li_data">
+									<span class="datatext">Время</span>
+									<br>
+									<input type="number" class="datainput">
+								</li>
+
+								<li class="li_data">
+									<span class="datatext">Стоимость</span>
+									<br>
+									<input type="number" class="datainput">
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="description" style="margin-top: 30px;">
+						<span class="descript_text">
+							Описание
+						</span>
+						<br>
+						<input type="text" class="descript_input">
+						<br>
+						<button class="btn-des">
+							+ Добавить мероприятие
+						</button>
+
+						<div class="two_btn">
+							<button class="btn-submit-des">
+								Сохранить
+							</button>
+							<button class="btn-submit-des">
+								Изменить
+							</button>
+						</div>
+					</div>
+					<div class="price_setting" style="margin-top: 50px;">
+						<h2 class="h2_sert">
+							Настройка цены
+						</h2>
+						<div class="unput-set" style="display: flex; margin-top: 20px;">
+							<span class="set-text" style="margin-top: 15px">Общий ценовой интервал:</span>
+
+							<input type="number" class="in-sert" style="margin-left: 20px">
+							<div class="line_set" style="width: 16px; height: 1px; background: #B0B0B0; margin-top: 25px; margin-left: 5px"></div>
+							<input type="number" class="in-sert2" style="margin-left: 10px">
+
+							<span class="set-sp" style="color:black; margin-left: 10px; margin-top: 15px; font-weight: bold;">тенге</span>
+						</div>
+						<div class="count_people" style="margin-top: 20px">
+							<span class="count-text">Общая вместетильность площадки:</span>
+
+							<input type="number" class="count-in">
+
+							<span class="txt-pp" style="margin-left: 16px; color: black; font-weight: bold;">человек</span>
+						</div>
+
+						<div class="checkbox-block">
+							<span class="check-text">Выберете формы реализации Вашей площадки:</span>
+							<br>
+
+							<label for="inUp" class="para-check">Помещение целиком</label>
+							<input id="inUp" type="checkbox" class="check-set" style="margin-top: 20px">
+							<br><br>
+							<label for="inUp2" class="para-check" style="margin-top: 6px">Отдельный элемент</label>
+							<input id="inUp2" type="checkbox" class="check-set" style="margin-top: 3px">
+
+						</div>
+						<div class="block_item">
+							<span class="span-it3m">Введите название отдельного элемента:</span>
+							<br>
+							<input type="text" class="item-input">
+
+						</div>
+						<div class="block_w2" style="margin-top: 20px">
+							<span class="item3">Количество отдельных элементов:</span>
+							<input type="number" class="in_it">
+							<br>
+
+							<span class="pain-item" style="margin-top: 20px; position: absolute;">Возможность выбора клиентом отдельного элемента:</span>
+							<br>
+							<button class="check-btn"><img src="./img/svg/yes.svg" alt="" class="img-check"></button>
+							<button class="check-btn"><img src="./img/svg/no.svg" alt="" class="img-check"></button>
+						</div>
+						<div class="elements-block">
+							<p class="para-elem">тенге</p>
+							<span class="check-elem">Укажите средний чек отдельного элемента:</span>
+							<input type="number" class="elem-input">
+						</div>
+						<div class="prices__block" style="margin-top: 20px">
+							<span class="price-elem">Стоимость:</span>
+
+							<input type="number" class="price__elem__input">
+							<select class="price_select">
+								<option value="" disabled selected hidden>Час</option>
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="*">*</option>
+								<option value="/">/</option>
+							</select>
+
+							<span class="gtt_pr" style="margin-left: 66px">Столик:</span>
+						</div>
+					</div>
+				</div>
+				<div class="footer_main">
+					<div class="block__format">
+						<span class="pimble">Формат аренды</span>
+						<span class="pimble">Номер элемента</span>
+						<span class="pimble">Тип дня</span>
+						<span class="pimble">Часовой интервал</span>
+						<span class="pimble">Стоимость (депозит)</span>
+						<span class="pimble">Доплата за 1чел.</span>
+						<span class="pimble">Ограничение по гостям</span>
+					</div>
+					<div class="block_form_list" style="margin-top: 20px">
+						<div class="form_list">
+							<span class="form-text" style="margin-left: 60px">Целиком</span>
+							<span class="form-text" style="margin-left: 95px;">1,2,3,4</span>
+							<span class="form-text" style="margin-left: 71px;">Обычный</span>
+							<span class="form-text" style="margin-left: 55px;">10:00-16:00</span>
+							<span class="form-text">Средний чек</span>
+							<span class="form-text" style="margin-left: 115px">650</span>
+							<span class="form-text" style="margin-left: 140px">15</span>
+						</div>
+					</div>
+					<button class="sub-form">+ Добавить</button>
+				</div>
+			</div>
+	</main>
+
+</body>
+</html>

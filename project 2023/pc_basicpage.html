@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Проект</title>
+	<link rel="stylesheet" href="./css/PC_style.css">
+	<link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<div class="header_wrapper">
+				<div class="header__logo">
+					<a href="#" class="header_logo_link">
+						<img src="./img/svg/logo1.svg" alt="Logo" class="header_logo_pic">
+					</a>
+				</div>
+
+				<nav class="header_nav">
+					<ul class="header_list">
+						<li class="header_item1">
+							<a href="#" class="header_link1">Все площадки Казахстана</a>
+						</li>
+						<li class="header_item2">
+							<a href="#" class="header_link2">+ Добавить площадку</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="icons">
+					<div class="icons_item">
+						<a href="#" class="earth">
+							<img src="./img/svg/icons8.svg" alt="Icons" class="icon">
+						</a>
+						<div class="dropdown" onclick="myFunction()">
+							<button class="dropbtn">
+								<div class="line_menu"></div>
+								<div class="line_menu"></div>
+								<div class="line_menu"></div>
+							</button>
+							<div id="myDropdown" class="dropdown-content">
+							    <a href="#">Настройки</a>
+							    <a href="#">Мой профиль</a>
+							    <a href="#">Помощь</a>
+							</div>
+						</div>
+						<script>
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+							    var dropdowns = document.getElementsByClassName("dropdown-content");
+							    var i;
+							    for (i = 0; i < dropdowns.length; i++) {
+							      var openDropdown = dropdowns[i];
+							      if (openDropdown.classList.contains('show')) {
+							        openDropdown.classList.remove('show');
+							      }
+							    }
+							  }
+							}
+						</script>
+					</div>
+				</div>
+				<div class="header__bar">
+					<div class="search-bar">
+						<input type="text" placeholder="Выберите свое мероприятие">
+				  		<input type="text" placeholder="Начало">	
+				  		<input type="text" placeholder="Конец">
+				  		<input type="text" placeholder="Количество гостей" class="last-input">
+				  		<button class="btn-srch">
+							<img src="./img/svg/srch-btn.svg" alt="srch" class="img__srch">
+						</button>
+			  		</div>
+		  		</div>
+			</div>
+		</div>
+
+	</header>
+		<main class="main">
+			<section class="intro">
+				<div class="wrapp">
+					<h1 class="intro_title">
+						Eventplace -
+					</h1>
+					<h2 class="intro_par">
+						с нами весело!
+					</h2>
+					<button class="mestosrch">
+						Найти место
+					</button>
+				</div>
+			</section>
+			<div class="container">
+				<div class="title_board">
+					<h3 class="brd-title">
+						Любой тип площадки
+					</h3>
+				</div>
+				<div class="line_h3"></div>
+				<div class="block__img1">
+					<div class="column">
+						<a href="#"><img src="./img/loft.jpg" alt="Лофт" class="loft">
+						<a href="#"><img src="./img/bar.jpg" alt="Бар" class="bar">
+						<a href="#"><img src="./img/besedki.jpg" alt="Беседка" class="besedka"></a>
+						<a href="#"><img src="./img/bath.jpg" alt="Бани и сауны" class="spa"></a>
+					</div>
+					<div class="column">
+						<a href="#"></a><img src="./img/cottage.jpg" alt="Коттеджи" class="cottage"></a>
+						<a href="#"><img src="./img/bowling.jpg" alt="Боулинг" class="bowling"></a>
+						<a href="#"><img src="./img/quests.jpg" alt="Квесты" class="quests"></a>
+					</div>
+				</div>
+			</div>
+			<div class="bg-block">
+				<div class="tt-block">
+					<h2 class="single">
+						Эксклюзивные события
+					</h2>
+					<p class="para">
+						Подберем самые интересные события на основе ваших<br>предпочтений. <span class="n-text">Найдем</span> эксклюзивные мероприятия, которых<br>больше ни у кого нет.
+						<br><br>
+						Подберем самые интересные события на основе ваших<br>предпочтений.<br>
+						<span class="n-text">Найдем</span> эксклюзивные мероприятия, которых больше ни у кого нет
+					</p>
+				</div>
+				<div class="in__block">
+				    <div id="slider" style="width: 534px; height: 320px;background-size: cover; transition: background 0.15s; border-radius: 8px;">
+
+				    <div class="btn-sld">
+				        <button onclick="plusDivs(0, -1)" class="slide-btn"><</button>
+				        <button onclick="plusDivs(0, 1)" class="slide-btn">></button>
+				    </div>
+				</div>
+		</main>
+
+		<footer class="footer">
+			<div class="container2">
+				<div class="type2txt__">
+					<h2 class="brd_title2">
+						Любой тип площадки
+					</h2>
+					<div class="line_h3"></div>
+					<div class="block__img2">
+						<div class="colum">
+							<a href="#"><img src="./img/restoran.png" alt="Лофт" class="resp__"></a>
+							<a href="#"><img src="./img/anticafe.png" alt="Бар" class="resp__"></a>
+							<a href="#"><img src="./img/batuts.png" alt="Беседка" class="resp__"></a>
+							<a href="#"><img src="./img/caraoke.png" alt="Бани и сауны" class="resp2__"></a>
+						</div>
+						<div class="colum">
+							<a href="#"><img src="./img/conference.png" alt="Коттеджи" class="resp3__"></a>
+							<a href="#"><img src="./img/studio.png" alt="Боулинг" class="resp3__"></a>
+							<a href="#"><img src="./img/club.png" alt="Квесты" class="resp2__"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block_end">
+				<div class="block__fut">
+					<h2 class="single">
+						Эксклюзивные события
+					</h2>
+					<p class="para">
+						Подберем самые интересные события на основе ваших<br>предпочтений. Найдем эксклюзивные мероприятия, которых<br>больше <span class="nett">ни у кого нет.</span>
+						<br><br>
+						Подберем самые интересные события на основе ваших<br>предпочтений. 
+					</p>
+				</div>
+				<div class="in__block">
+			        <div id="slider2" style="width: 534px; height: 320px;background-size: cover; transition: background 0.15s; border-radius: 8px;">
+
+			        <div class="btn-sld">
+			            <button onclick="plusDivs(1, -1)" class="slide-btn"><</button>
+			            <button onclick="plusDivs(1, 1)" class="slide-btn">></button>
+			        </div>
+			        <script>
+					    var slideIndex = [1, 1];
+					    var slideId = ["slider", "slider2"];
+					    var images = ["./img/Rectangle1.jpg", "./img/Rectangle2.jpg"];
+
+					    function showDivs(sliderNo, n) {
+					        if (n > images.length) {slideIndex[sliderNo] = 1}
+					        if (n < 1) {slideIndex[sliderNo] = images.length}
+					        document.getElementById(slideId[sliderNo]).style.backgroundImage = "url(" + images[slideIndex[sliderNo]-1] + ")";
+					    }
+
+					    function plusDivs(sliderNo, n) {
+					        showDivs(sliderNo, slideIndex[sliderNo] += n);
+					    }
+
+					    showDivs(0, slideIndex[0]);
+					    showDivs(1, slideIndex[1]);
+					</script>
+				</div>
+			<div class="event__block">
+				<div class="events">
+					<h2 class="brd_title2">
+						Любой тип события
+					</h2>
+					<div class="line_h3"></div>
+					<div class="events__list__block">
+						<div class="__block__">
+							<ul class="events__items">
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+							</ul>
+						</div>
+						<div class="__block__">
+							<ul class="events__items">
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+							</ul>
+						</div>
+						<div class="__block__">
+							<ul class="events__items">
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+							</ul>
+						</div>
+						<div class="__block__">
+							<ul class="events__items">
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+							</ul>
+						</div>
+						<div class="__block__">
+							<ul class="events__items">
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+								<a href="#" class="event_link"><li class="item">
+									<span class="type_event">Тип</span>
+									<p class="mero_event">Мероприятия</p>
+								</li></a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer__support">
+			<div class="__line__"></div>
+			<div class="__line2__"></div>
+			<div class="__line3__"></div>
+			<div class="list__text__">
+				<ul class="ul__text">
+					<li class="pain">
+						<a href="#" class="link__pain">Наши преимущества</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">Как работает сервис?</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">Подключится к Eventplace</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">Гарантии и безопастность</a>
+					</li>
+				</ul>
+				<div class="rest">
+					<span class="restspan">
+						© 2021 All rights reserved
+					</span>
+				</div>
+			</div>
+			<div class="list__text2__">
+				<ul class="ul__text">
+					<li class="pain">
+						<a href="#" class="link__pain">FAQ</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">Документы</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">Инвесторам</a>
+					</li>
+					<li class="pain">
+						<a href="#" class="link__pain">СМИ о нас</a>
+					</li>
+				</ul>
+			</div>
+			<div class="list_ico">
+				<ul class="ul__ico">
+					<li class="icon-s">
+						<a href="#" class="link__pain"><img src="./img/svg/f.svg" alt="f" class="url_ico"></a>
+					</li>
+					<li class="icon-s">
+						<a href="#" class="link__pain"><img src="./img/svg/t.svg" alt="f" class="url_ico"></a>
+					</li>
+					<li class="icon-s">
+						<a href="#" class="link__pain"><img src="./img/svg/inst.svg" alt="f" class="url_ico"></a>
+					</li>
+					<li class="icon-s">
+						<a href="#" class="link__pain"><img src="./img/svg/vk.svg" alt="f" class="url_ico"></a>
+					</li>
+				</ul>
+				<div class="ico-text">
+					<span class="ico___">
+						OOO “Eventpacle”
+						<br><br>
+						OOO “Eventpacle”
+					</span>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
